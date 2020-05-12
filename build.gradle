@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'Derovi'
+version '0.5.12'
+
+sourceCompatibility = 1.8
+
+jar {
+    manifest {
+        attributes(
+                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+                'Main-Class': 'by.derovi.testplugin.Plugin'
+        )
+    }
+    destinationDir project.file('E:/server/plugins')
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation files('lib/spigot.jar')
+}

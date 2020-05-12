@@ -1,0 +1,8 @@
+name: TestPlugin
+main: by.derovi.testplugin.Plugin
+author: Derovi
+version: 0.5.12
+commands:
+  # Main plugin command
+  testplugin:
+    aliases: [testp]
