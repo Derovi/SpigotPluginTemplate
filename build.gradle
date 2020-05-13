@@ -5,6 +5,8 @@ plugins {
 group 'Derovi'
 version '0.5.12'
 
+sourceCompatibility = 1.8
+
 jar {
     manifest {
         attributes(

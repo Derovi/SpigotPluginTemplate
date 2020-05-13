@@ -7,6 +7,9 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Plugin extends JavaPlugin {
+    private static Plugin instance;
+    private CommandManager commandManager = new CommandManager();
+
     @Override
     public void onEnable() {
         super.onEnable();
@@ -23,15 +26,7 @@ public class Plugin extends JavaPlugin {
         return commandManager;
     }
 
-    public void setCommandManager(CommandManager commandManager) {
-        this.commandManager = commandManager;
-    }
-
     private void registerCommands() {
-        commandManager = new CommandManager();
         commandManager.registerCommand(new TestCommand());
     }
-
-    private static Plugin instance;
-    private CommandManager commandManager;
 }
