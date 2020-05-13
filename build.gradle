@@ -19,4 +19,5 @@ jar {
 
 dependencies {
     implementation files('lib/spigot.jar')
+    implementation files('lib/vault.jar')
 }
